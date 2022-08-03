@@ -1,0 +1,25 @@
+name = "TODO"
+version = "TODO"
+link = "TODO"
+source = "TODO"
+min-crankshaft-version = "0.2.2"
+
+[author]
+name = "TODO"
+link = "TODO"
+
+[entrypoints]
+
+	[entrypoints.desktop]
+	library = false
+	menu = false
+
+	[entrypoints.deck]
+	library = false
+	menu = false
+	quick-access = false
+
+[store]
+description = """
+TODO
+"""
