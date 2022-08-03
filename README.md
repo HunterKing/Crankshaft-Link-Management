@@ -1,4 +1,2 @@
-# crankshaft-plugin-template
-
-For a guide on creating your own plugin, please see the
-[Crankshaft documentation](https://crankshaft.space/docs);
+# Crankshaft Link Management
+Manage all of the links that appear beneath the Steam "Install" button.

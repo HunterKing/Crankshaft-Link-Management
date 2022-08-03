@@ -1,25 +1,25 @@
-name = "TODO"
-version = "TODO"
-link = "TODO"
-source = "TODO"
+name = "Link Manager"
+version = "0.1"
+link = "https://github.com/HunterKing/Crankshaft-Link-Management"
+source = "https://github.com/HunterKing/Crankshaft-Link-Management"
 min-crankshaft-version = "0.2.2"
 
 [author]
-name = "TODO"
-link = "TODO"
+name = "Hunter King"
+link = "https://github.com/HunterKing"
 
 [entrypoints]
 
 	[entrypoints.desktop]
-	library = false
+	library = true
 	menu = false
 
 	[entrypoints.deck]
-	library = false
+	library = true
 	menu = false
 	quick-access = false
 
 [store]
 description = """
-TODO
+Show/Hide links beneath Steam install button.
 """
