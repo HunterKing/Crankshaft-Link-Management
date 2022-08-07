@@ -1,5 +1,7 @@
 # https://github.com/github/gitignore/blob/d0b80a469983a7beece8fa1f5c48a8242318b531/Node.gitignore
 
+.vscode/*
+
 # Logs
 logs
 *.log

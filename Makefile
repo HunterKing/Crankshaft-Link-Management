@@ -5,7 +5,7 @@ BUILD_CMD = yarn esbuild src/index.ts \
 	--jsx-fragment=DocumentFragment \
 	--define:process='{"env":{"NODE_ENV":"development"}}' \
 	--loader:.css=text \
-	--outfile=augmented/dist/index.js
+	--outfile=links/dist/index.js
 
 .PHONY: build
 build:
