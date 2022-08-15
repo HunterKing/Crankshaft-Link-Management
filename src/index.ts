@@ -4,15 +4,31 @@ const deleteAll = (selector: string) =>
   document.querySelectorAll(selector).forEach((node) => node.remove());
 
 const getLinkElement = (item: HTMLElement) => {
-  console.log(item['outerText']);
+  console.log(item);
+  var actual_text = item.firstElementChild?.firstElementChild?.firstElementChild;
+  actual_text = <HTMLElement>actual_text;
+  //var actual_text = item.firstChild?.firstChild?.firstChild;
+  actual_text.innerHTML = "hello"; 
   return item;
 };
 
 const createNewLink = (item: HTMLElement, newname: string, targeturl: string) => {
-  var newitem = item;
-  newitem['outerText'] = newname;
-  //newitem[0]['href'] = targeturl;
+  var newitem = item.cloneNode(true);
+  console.log("New Item!!");
+  console.log(newitem);
+  console.log(newitem);
+
   return newitem;
+  return(
+    <div class="appdetailsprimarylinkssection_LinkInner_7k4qm" style="opacity: 0; pointer-events: none; z-index: -100;" tabindex="7">
+      <a class="appdetailsprimarylinkssection_Anchor_DY4_w Focusable" href="https://store.steampowered.com/app/13240?snr=5000_5100___primarylinks">
+        <div class="appdetailsprimarylinkssection_Link_1b6LY">
+          <span class="appdetailsprimarylinkssection_Text_2sNDj">Store Page
+          </span>
+        </div>
+      </a>
+    </div>
+  
 };
 
 export const load = (smm: SMM) => {
@@ -20,7 +36,7 @@ export const load = (smm: SMM) => {
 
   smm.addEventListener('switchToAppDetails', async (event: any) => {
     //Try and clean up before putting some new stuff in.
-    deleteAll('[data-smm-links]');
+    //deleteAll('[data-smm-links]');
 
     //Grab the App ID and App Name for the targeted selection and print.
     const { appId, appName } = event.detail;
@@ -37,7 +53,9 @@ export const load = (smm: SMM) => {
     var link_list = document.querySelector(appLinks)?.children;
     const yoinkma = link_list[0];
     const test = getLinkElement(yoinkma);
-    document.querySelector(appLinks)?.appendChild(createNewLink(yoinkma, "Hello", "https://google.com"));
+    const example = createNewLink(yoinkma, "Hello", `https://google.com/${appName}` );
+
+    //document.querySelector(appLinks)?.appendChild(example);
     //console.log(getLinkElement(yoinkma));
 
     //console.log(link_list[0]);
